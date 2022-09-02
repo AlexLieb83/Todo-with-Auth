@@ -6,6 +6,7 @@ module.exports = {
   getTodos: async (req, res) => {
     console.log(req.user);
     try {
+      //go through, grab just the todos from the logged in user
       const todoItems = await Todo.find({ userId: req.user.id });
       const itemsLeft = await Todo.countDocuments({
         userId: req.user.id,
