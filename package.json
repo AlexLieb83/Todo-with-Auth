@@ -1,7 +1,7 @@
 {
   "name": "todo-mvc-auth-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "Early stages of development, understanding the codebase.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -20,9 +20,17 @@
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.19",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "validator": "^13.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLieb83/Todo-with-Auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexLieb83/Todo-with-Auth/issues"
+  },
+  "homepage": "https://github.com/AlexLieb83/Todo-with-Auth#readme"
 }
