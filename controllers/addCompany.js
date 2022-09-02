@@ -6,8 +6,8 @@ module.exports = {
         console.log(req.user);
         try {
             //go through, grab just the companies from the logged in user
-            const companyList = await Company.find({ userId: req.user.id }); //list out all the companies relevant to the logged in user. 
-            const totalCompanies = await Todo.countDocuments({ //Currently repurposing this to tally number of companies listed in db for that logged in user.
+            const companyList = await addCompany.find({ userId: req.user.id }); //list out all the companies relevant to the logged in user. 
+            const totalCompanies = await addCompany.countDocuments({ //Currently repurposing this to tally number of companies listed in db for that logged in user.
                 userId: req.user.id,
                 completed: false,
             });
@@ -23,7 +23,7 @@ module.exports = {
     //creating a new company
     createCompany: async (req, res) => { //create a company
         try {
-            await Company.create({
+            await addCompany.create({
                 company: req.body.CompanyName,
                 coffeeChatDate: req.body.DateAdded,
                 role: req.body.Role,
@@ -53,7 +53,7 @@ module.exports = {
     //completing todos
     //   markComplete: async (req, res) => { //...mark company complete
     //     try {
-    //       await Todo.findOneAndUpdate(
+    //       await addCompany.findOneAndUpdate(
     //         { _id: req.body.todoIdFromJSFile },
     //         {
     //           completed: true,
@@ -68,7 +68,7 @@ module.exports = {
     //   //reversing completed todos
     //   markIncomplete: async (req, res) => {
     //     try {
-    //       await Todo.findOneAndUpdate(
+    //       await addCompany.findOneAndUpdate(
     //         { _id: req.body.todoIdFromJSFile },
     //         {
     //           completed: false,
@@ -84,7 +84,7 @@ module.exports = {
     deleteCompany: async (req, res) => { //delete company. 
         console.log(req.body.todoIdFromJSFile);
         try {
-            await Company.findOneAndDelete({ _id: req.body.todoIdFromJSFile }); //convert todoId if changed on front end by Tristan/Antonio
+            await addCompany.findOneAndDelete({ _id: req.body.todoIdFromJSFile }); //convert todoId if changed on front end by Tristan/Antonio
             console.log("Deleted Company");
             res.json("Deleted It");
         } catch (err) {
