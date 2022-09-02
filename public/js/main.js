@@ -68,3 +68,14 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+
+// add currentDate as default value for datePicker
+const date = new Date()
+
+let day = ("0" + date.getDate()).slice(-2)
+let month = ("0" + (date.getMonth() + 1)).slice(-2)
+let year = date.getFullYear()
+
+let currentDate = `${year}-${month}-${day}`
+
+document.getElementById("datePicker").value = currentDate
