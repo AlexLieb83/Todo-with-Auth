@@ -1,10 +1,11 @@
-h1{
-    color: red;
+table,
+td,
+th {
+  border: 1px solid #333;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
 }

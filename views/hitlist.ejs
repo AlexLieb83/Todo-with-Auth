@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitlist Table</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ADD IN NAME WHEN BACKEND IS CONNECTED**** -->
+    <h1>Check out your Hitlist below.</h1>
+
+    <!-- IDK IF THIS ACTUALLY WORKS -->
+    <button class="addNewCompany">
+      <a href="/routes/addCompany">Add New Company</a>
+    </button>
+
+    <table id="hitlistTable">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Date Added</th>
+          <th>URL</th>
+          <th>Role/Position</th>
+          <th>Type of Position</th>
+          <th>Job Source</th>
+          <th>Applied</th>
+          <th>Date Application Sent</th>
+          <th>Interview Date</th>
+          <th>Interview Follow Up</th>
+          <th>Interview Follow Up Date</th>
+          <th>Next Steps</th>
+          <th>Company Contacts</th>
+          <th>Edit Company</th>
+          <th>Delete Company</th>
+        </tr>
+      </thead>
+      <tbody id="hitlistTableBody"></tbody>
+    </table>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/hitlist.js"></script>
+  </body>
+</html>
