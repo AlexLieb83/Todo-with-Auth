@@ -64,7 +64,19 @@
       <% }) %>
     </tbody>
   </table>
+
+  <ul>
+    <% companies.forEach( el=> { %>
+      <li class='companyName' data-id='<%=el.companies%>'>
+        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.companyName %></span>
+        <span class='del'> Delete </span>
+      </li>
+      <% }) %>
+  </ul>
+  <a href="/addCompany/hitlist">See Hitlist/Add Company</a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
   <a href="/logout">Logout</a>
 </body>
 </html>

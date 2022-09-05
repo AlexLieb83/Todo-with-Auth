@@ -13,10 +13,9 @@ const AddCompanySchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  links: [{
-    label: { type: String },
-    url: { type: String }
-  }],
+  joblink: {
+    url: String 
+   },
   role: {
     type: String,
     required: true
@@ -45,7 +44,7 @@ const AddCompanySchema = new mongoose.Schema({
     }]
   }],
   Applied: {
-    type: Boolean,
+    type: String,
     required: true
   },
   //not required if user is just scouting the area

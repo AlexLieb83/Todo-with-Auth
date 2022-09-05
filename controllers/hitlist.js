@@ -5,6 +5,3 @@ module.exports = {
       res.render("hitList.ejs");
       // res.render("companyView.ejs")
     },
-  };
-  
-

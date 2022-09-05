@@ -8,18 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Add a company to <%= user.userName %>'s Hitlist</h1>
-    <!--<ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul> -->
 
-    <form action="/companies/createCompany" method='POST'>
+    <h1>Add a comapny to your HitList</h1>
+
+    <form action="/addCompany/addCompany" method='POST'>
         <h2>Company Details</h2>
+
         <label for="company">Company</label>
         <input type="text" placeholder="Company Name" id="companyName" name='companyName'>
         <br>
@@ -59,7 +53,9 @@
         <input type="checkbox" id="coffeechat" name="coffeeChat">
         <br>
         <label for="coffeeChatDate">Coffee Chat Date</label>
-        <input type="date" id="datePicker coffeeChatDate" name='coffeeChatDate'>
+
+        <input type="date" id="datePicker coffeeChatDate" name='coffeeDateAdded'>
+
         <br>
         <label for="status">Status</label>
         <select name = "dropdown">
@@ -76,6 +72,6 @@
 
     <a href="/logout">Logout</a>
 
-    <script src="js/main.js"></script>
+    <script src="../public/js/main.js"></script>
 </body>
 </html>

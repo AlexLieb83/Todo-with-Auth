@@ -78,4 +78,4 @@ let year = date.getFullYear()
 
 let currentDate = `${year}-${month}-${day}`
 
-document.getElementById("datePicker").value = currentDate
+// document.getElementById("datePicker").value = currentDate
