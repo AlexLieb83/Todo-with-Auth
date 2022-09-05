@@ -6,11 +6,11 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //when '/' is called, run ensureAuth, to make sure user is logged in, getTodos from the todosController
 //etc etc
-router.get("/", ensureAuth, addCompanyController.getAddCompany);
+router.get("/", ensureAuth, addCompanyController.getCompanyList);
 
-router.post("/addCompany", addCompanyController.addCompany);
+router.post("/addCompany", addCompanyController.createCompany);
 
 //cancel button
-router.get("/hitlist", hitlistController.getHitlist);
+router.get("/hitlist", hitlistController.getHitList);
 
 module.exports = router;
