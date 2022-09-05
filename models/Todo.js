@@ -25,7 +25,10 @@ const TodoSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  //LINKS:{},
+  links: [{
+    label: { type: String },
+    url: { type: String }
+  }],
   role: {
     type: String,
     required: true
@@ -39,7 +42,21 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  //CONTACTS: {},
+  contacts: [{
+    name: String,
+    position: String,
+    email: String,
+    phone: String,
+    notes: String,
+    thankYou: Date,
+    coffeeChat: Boolean,
+    coffeeChatDate: Date,
+    status: String,
+    links: [{
+      label: { type: String },
+      url: { type: String }
+    }]
+  }],
   Applied: {
     type: Boolean,
     required: true
