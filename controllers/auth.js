@@ -5,7 +5,7 @@ const User = require("../models/User");
 //function for login, redirects user to their addCompany
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect("/addCompany"); //*** Should this be different? */
+    return res.redirect("/hitlist"); //testing hitlist, renamed from addCompany
   }
   //???***
   res.render("login", {
@@ -24,7 +24,7 @@ exports.postLogin = (req, res, next) => {
   //if there are any validationErrors, flash them to the screen and redirect to login
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
-    return res.redirect("/login");
+    return res.redirect("/addCompany");
   }
   //use normalizeEmail to make validating emails easier
   req.body.email = validator.normalizeEmail(req.body.email, {

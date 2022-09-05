@@ -12,6 +12,7 @@ const connectDB = require("./config/database");
 
 const mainRoutes = require("./routes/main");
 const addCompanyRoutes = require("./routes/addCompany");
+const hitlist = require('./routes/hitlist')
 
 
 require("dotenv").config({ path: "./config/.env" });
@@ -46,10 +47,9 @@ app.use(flash());
 // '/' leads to mainRoutes
 app.use("/", mainRoutes);
 //adjust this: 
+
+app.use("/hitlist", hitlist);
 app.use("/addCompany", addCompanyRoutes);
-
-
-
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running, you better catch it! http://localhost:${process.env.PORT}`)

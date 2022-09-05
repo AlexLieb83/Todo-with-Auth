@@ -7,4 +7,3 @@ module.exports = {
     // res.render("companyView.ejs")
   },
 };
-
