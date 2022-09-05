@@ -1,4 +1,4 @@
-const Contacts = require("../models/Contact");
+const Contacts = require("../models/Contact"); //Will this be a separate model or part of the Todo? -Evan 9/5/22
 
 //
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
   //creating new todos
   createContact: async (req, res) => {
     try {
-      await Contact.create({
+      await Contact.create( req.body {
         name: req.body.fullName,
         position: req.body.position,
         email: req.body.email,
@@ -92,3 +92,4 @@ module.exports = {
     }
   },
 };
+

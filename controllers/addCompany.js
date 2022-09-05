@@ -1,4 +1,4 @@
-const addCompany = require("../models/addCompany"); //need to create addCompany model - Evan
+const addCompany = require("../models/addCompany"); 
 
 module.exports = {
     //reading the companies
@@ -11,7 +11,7 @@ module.exports = {
                 userId: req.user.id,
                 completed: false,
             });
-            res.render("fullCompanyList.ejs", { //the full list of companies in the hitlist.
+            res.render("companyView.ejs", { //the full list of companies in the hitlist.
                 companies: companyList,
                 left: totalCompanies, //numerical value of all companies in users database. 
                 user: req.user,
@@ -24,7 +24,9 @@ module.exports = {
     createCompany: async (req, res) => { //create a company
         try {
             await addCompany.create({
-                company: req.body.CompanyName,
+                userId: req.user.id,
+
+                company: req.body.companyName,
                 coffeeChatDate: req.body.DateAdded,
                 role: req.body.Role,
                 positionType: req.body.PositionType,
@@ -42,7 +44,7 @@ module.exports = {
                 status: req.body.Active, //extracting data from drop down, anythign special needed?
                 applied: req.body.Applied,
                 completed: false, // leaving in to grab a count of total companies. 
-                userId: req.user.id,
+                
             });
             console.log("A new company has been created!");
             res.redirect("/"); //***CHANGE*** -> whats the home directory called?
