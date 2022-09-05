@@ -38,7 +38,15 @@
     <tbody id="contactsTable">
     </tbody>
   </table>
-
+  <ul>
+    <% companies.forEach( el=> { %>
+      <li class='companyName' data-id='<%=el.companies%>'>
+        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.companyName %></span>
+        <span class='del'> Delete </span>
+      </li>
+      <% }) %>
+  </ul>
+  <a href="/addCompany/hitlist">See Hitlist/Add Company</a>
   <a href="/logout">Logout</a>
 
   <script src="js/companyView.js"></script>

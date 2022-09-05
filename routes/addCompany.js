@@ -9,7 +9,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.get("/", ensureAuth, addCompanyController.getCompanyList);
 
 router.post("/addCompany", addCompanyController.createCompany);
-
+router.get("/goToAdd", addCompanyController.getAddCompanyPage);
 //cancel button
 router.get("/hitlist", hitlistController.getHitList);
 

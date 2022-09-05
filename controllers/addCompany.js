@@ -20,19 +20,21 @@ module.exports = {
             console.log(err);
         }
     },
+    getAddCompanyPage: (req, res) => {
+        res.render("todos.ejs");
+        // res.render("companyView.ejs")
+    },
     //creating a new company
     createCompany: async (req, res) => { //create a company
         try {
             await addCompany.create({
                 userId: req.user.id,
-
-                company: req.body.companyName,
-                coffeeChatDate: req.body.DateAdded,
+                companyName: req.body.companyName,
+                dateAdded: req.body.DateAdded,
                 role: req.body.Role,
                 positionType: req.body.PositionType,
                 source: req.body.Source,
-                links: req.body.URLText,
-                url: req.body.URLLink,
+                joblink: req.body.URLLink,
                 firstName: req.body.FirstName,
                 lastName: req.body.LastName,
                 email: req.body.Email,
@@ -42,12 +44,12 @@ module.exports = {
                 // cofeeChatDate: req.body.CoffeeChat, // another duplicate?
                 // cofeechatDate: req.body.DateAdded, // another duplicate?
                 status: req.body.Active, //extracting data from drop down, anythign special needed?
-                applied: req.body.Applied,
+                Applied: req.body.Applied,
                 completed: false, // leaving in to grab a count of total companies. 
                 
             });
             console.log("A new company has been created!");
-            res.redirect("/"); //***CHANGE*** -> whats the home directory called?
+            res.redirect("/addCompany"); //***CHANGE*** -> whats the home directory called?
         } catch (err) {
             console.log(err);
         }
