@@ -48,15 +48,9 @@ const TodoSchema = new mongoose.Schema({
     email: { type: String },
     phone: { type: String },
     notes: { type: String },
-<<<<<<< HEAD
     thankYou: { type: Date },
     coffeeChat: { type: Boolean },
     coffeeChatDate: { type: Date },
-=======
-    thankYou: { type: Date},
-    coffeeChat: { type: Boolean},
-    coffeeChatDate: { type: Date},
->>>>>>> 086ec85cce9604dc6c291473f6b2abf381bca296
     status: { type: String },
     links: [{
       label: { type: String },
