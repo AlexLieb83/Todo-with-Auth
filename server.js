@@ -1,5 +1,4 @@
 // Required Packagester
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -47,9 +46,6 @@ app.use(flash());
 app.use("/", mainRoutes);
 //adjust this: 
 app.use("/addCompany", addCompanyRoutes);
-
-
-
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running, you better catch it! http://localhost:${process.env.PORT}`)
