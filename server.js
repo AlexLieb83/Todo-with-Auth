@@ -1,4 +1,4 @@
-// Required Packages
+// Required Packagester
 
 const express = require("express");
 const app = express();
@@ -9,8 +9,10 @@ const MongoStore = require("connect-mongo")(session);
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
+
 const mainRoutes = require("./routes/main");
-const todoRoutes = require("./routes/todos");
+const addCompanyRoutes = require("./routes/addCompany");
+
 
 require("dotenv").config({ path: "./config/.env" });
 
@@ -41,9 +43,13 @@ app.use(passport.session());
 //express flash message
 app.use(flash());
 
-// '/' leads to mainRoutes4
+// '/' leads to mainRoutes
 app.use("/", mainRoutes);
-app.use("/todos", todoRoutes);
+//adjust this: 
+app.use("/addCompany", addCompanyRoutes);
+
+
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running, you better catch it! http://localhost:${process.env.PORT}`)
