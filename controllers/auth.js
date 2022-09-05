@@ -2,10 +2,10 @@ const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
-//function for login, redirects user to their todos
+//function for login, redirects user to their addCompany
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect("/todos");
+    return res.redirect("/addCompany"); //*** Should this be different? */
   }
   //???***
   res.render("login", {
@@ -44,13 +44,15 @@ exports.postLogin = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      //if no errors, return success and send user to their last saved session or /todos
+      //if no errors, return success and send user to their last saved session or /addCompany
       req.flash("success", { msg: "Success! You are logged in." });
-      res.redirect(req.session.returnTo || "/todos");
+      res.redirect(req.session.returnTo || "/addCompany");
     });
   })(req, res, next);
 };
 
+
+//NEED LOGOUT BUTTON
 exports.logout = (req, res) => {
   //logout and destroy the saved session
   req.logout();
@@ -65,7 +67,7 @@ exports.logout = (req, res) => {
 //successful sign up
 exports.getSignup = (req, res) => {
   if (req.user) {
-    return res.redirect("/todos");
+    return res.redirect("/addCompany");
   }
   //????
   res.render("signup", {
@@ -116,7 +118,7 @@ exports.postSignup = (req, res, next) => {
         });
         return res.redirect("../signup");
       }
-      //if everything is unique, save user and log in, redirect to their /todos
+      //if everything is unique, save user and log in, redirect to their /addCompany
       user.save((err) => {
         if (err) {
           return next(err);
@@ -125,7 +127,7 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/todos");
+          res.redirect("/addCompany");
         });
       });
     }
