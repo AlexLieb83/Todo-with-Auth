@@ -43,15 +43,15 @@ const TodoSchema = new mongoose.Schema({
     required: true
   },
   contacts: [{
-    name: String,
-    position: String,
-    email: String,
-    phone: String,
-    notes: String,
-    thankYou: Date,
-    coffeeChat: Boolean,
-    coffeeChatDate: Date,
-    status: String,
+    name: { type: String },
+    position: { type: String },
+    email: { type: String },
+    phone: { type: String },
+    notes: { type: String },
+    thankYou: { type: Date },
+    coffeeChat: { type: Boolean },
+    coffeeChatDate: { type: Date },
+    status: { type: String },
     links: [{
       label: { type: String },
       url: { type: String }
