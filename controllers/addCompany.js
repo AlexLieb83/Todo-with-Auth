@@ -1,4 +1,4 @@
-const addCompany = require("../models/Todo2"); //name changed from addCompany to Todo
+const addCompany = require("../models/addCompany"); //need to create addCompany model - Evan
 
 module.exports = {
     //reading the companies
@@ -21,7 +21,7 @@ module.exports = {
         }
     },
     //creating a new company
-    createCompany: async (req, res) => { //create a compan
+    createCompany: async (req, res) => { //create a company
         try {
             await addCompany.create({
                 company: req.body.CompanyName,
