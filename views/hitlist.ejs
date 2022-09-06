@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hitlist Table</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <%- include('partials/head.ejs') %>
   <body>
+    <%- include('partials/navbar.ejs') %>
     <!-- ADD IN NAME WHEN BACKEND IS CONNECTED**** -->
     <h1>Check out your Hitlist below.</h1>
-
+    <br /><br />
+    <% console.log(companies) %>
     <!-- IDK IF THIS ACTUALLY WORKS -->
-    <button class="addNewCompany">
-      <a href="/addCompany/goToAdd">Add New Company</a>
+    <button type="button" class="addNewCompany btn btn-success">
+      <a style="color: white; text-decoration: none;" href="/company/goToAdd">Add New Company</a>
     </button>
-
-    <table id="hitlistTable">
+    <table id="hitlistTable" class="table table-striped">
       <thead>
         <tr>
           <th>Company Name</th>
@@ -39,7 +34,7 @@
       <tbody id="hitlistTableBody"></tbody>
     </table>
 
-    <a href="/logout">Logout</a>
+    <a class="btn btn-danger" href="/logout">Logout</a>
 
     <script src="js/hitlist.js"></script>
   </body>

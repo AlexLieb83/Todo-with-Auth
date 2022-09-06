@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const hitlistController = require("../controllers/hitlist");
-const addCompanyController = require("../controllers/addCompany");
+const addCompanyController = require("../controllers/company");
 const contactsController = require("../controllers/contacts");
 const editCompanyController = require("../controllers/editCompany");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");

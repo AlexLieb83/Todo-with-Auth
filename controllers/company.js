@@ -11,7 +11,7 @@ module.exports = {
                 userId: req.user.id,
                 completed: false,
             });
-            res.render("companyView.ejs", { //the full list of companies in the hitlist.
+            res.render("hitlist.ejs", { //the full list of companies in the hitlist.
                 companies: companyList,
                 left: totalCompanies, //numerical value of all companies in users database. 
                 user: req.user,
@@ -21,7 +21,7 @@ module.exports = {
         }
     },
     getAddCompanyPage: (req, res) => {
-        res.render("todos.ejs");
+        res.render("addCompany.ejs");
         // res.render("companyView.ejs")
     },
     //creating a new company
@@ -49,7 +49,7 @@ module.exports = {
                 
             });
             console.log("A new company has been created!");
-            res.redirect("/addCompany"); //***CHANGE*** -> whats the home directory called?
+            res.redirect("/company"); //***CHANGE*** -> whats the home directory called?
         } catch (err) {
             console.log(err);
         }
