@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-
+const mongoose = require("mongoose");
 
 // const blogSchema = new Schema({
 //   title:  String, // String is shorthand for {type: String}
@@ -14,25 +13,22 @@ const mongoose = require('mongoose')
 //   }
 // });
 
-
-
-
 const AddCompanySchema = new mongoose.Schema({
   userId: {
     type: String,
-    required: true
+    required: true,
   },
   companyName: {
     type: String,
-    required: true
+    required: true,
   },
   dateAdded: {
     type: Date,
     default: Date.now,
-    required: true
+    required: true,
   },
   joblink: {
-    type: String
+    type: String,
   },
   role: {
     type: String,
@@ -46,42 +42,38 @@ const AddCompanySchema = new mongoose.Schema({
     type: String,
     // required: true
   },
-  // contacts needs to be its own schema
-  // contacts: [{
-  //   name: { type: String },
-  //   position: { type: String },
-  //   email: { type: String },
-  //   phone: { type: String },
-  //   notes: { type: String },
-  //   thankYou: { type: Date },
-  //   coffeeChat: { type: Boolean },
-  //   coffeeChatDate: { type: Date },
-  //   status: { type: String },
-  //   links: [{
-  //     label: { type: String },
-  //     url: { type: String }
-  //   }]
-  // }],
-  // applied: {
-  //   type: String,
-  //   // required: true
-  // },
-  // //not required if user is just scouting the area
-  // dateApplicationSent: {
-  //   type: Date
-  // },
-  // interviewDate: {
-  //   type: Date
-  // },
-  // interviewFollowUp: {
-  //   type: Boolean
-  // },
-  // interviewFollowupDate: {
-  //   type: Date
-  // },
-  // nextSteps: {
-  //   type: String
-  // }
-})
+  dateApplicationSent: {
+    type: String,
+  },
+  interviewDate: {
+    type: String,
+  },
+  interviewFollowUpDate: {
+    type: String,
+  },
+  nextSteps: {
+    type: String,
+  },
+  //contacts probably needs to be its own schema
+  contacts: [
+    {
+      name: { type: String },
+      position: { type: String },
+      email: { type: String },
+      phone: { type: String },
+      notes: { type: String },
+      thankYou: { type: Date },
+      coffeeChat: { type: Boolean },
+      coffeeChatDate: { type: Date },
+      status: { type: String },
+      links: [
+        {
+          label: { type: String },
+          url: { type: String },
+        },
+      ],
+    },
+  ],
+});
 
-module.exports = mongoose.model('addCompany', AddCompanySchema)
+module.exports = mongoose.model("addCompany", AddCompanySchema);
