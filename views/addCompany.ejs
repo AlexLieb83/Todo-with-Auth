@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <h1>Add a comapny to your HitList</h1>
@@ -15,26 +17,33 @@
         <h2>Company Details</h2>
 
         <label for="company">Company</label>
-        <input type="text" placeholder="Company Name" id="companyName" name='companyName'>
+        <input type="text" placeholder="Company Name" id="companyName" name='companyName' value="company name">
         <br>
-        <label for="dateCreated">Coffee Chat Date</label>
+        <label for="dateCreated">Date Added</label>
+        <!-- adjust date to just time stamp as needed-->
         <input type="date" id="datePicker dateCreated" name='dateAdded'>
+        <br>
+        <!--  -->
+        <label for="url">Job Link</label>
+        <input type="text" placeholder="Job Link" id="url" name='joblink'>
         <br>
         <label for="role">Role</label>
         <input type="text" placeholder="Role" id="role" name='role'>
         <br>
+
         <label for="positionType">Position Type</label>
-        <input type="text" placeholder="Position Type" id="positionType" name='PositionType'>
+        <input type="text" placeholder="Position Type" id="positionType" name='positionType'>
         <br>
+
         <label for="source">Source</label>
         <input type="text" placeholder="Source" id="source" name='source'>
         <br>
-        <h3>Links</h3>
-        <label for="urlText">URL Text</label>
-        <input type="text" placeholder="URL Text" id="label" name='label'>
-        <br>
-        <label for="url">URL</label>
-        <input type="text" placeholder="URL" id="url" name='url'>
+        
+        <h3>Links</h3> <!--link for the job?-->
+        <!-- <label for="urlText">Job Link</label>
+        <input type="text" placeholder="URL Text" id="label" name='urlLabel'>
+        <br> -->
+        <!-- 
         <h3>Contact</h3>
         <label for="firstname">Name</label>
         <input type="text" placeholder="John Smith" id="name" name="name">
@@ -63,10 +72,11 @@
             <option value="Inactive" name="Inactive">Inactive</option>
          </select>
         <br>
-        <label for="Applied">Applied</label>
-        <input type="checkbox" name="Applied">
+        <label for="applied">applied</label>
+        <input type="checkbox" name="applied">
         <br>
         <br>
+        -->
         <input type="submit">
     </form>
 
@@ -74,4 +84,5 @@
 
     <script src="../public/js/main.js"></script>
 </body>
+
 </html>

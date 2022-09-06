@@ -1,5 +1,22 @@
 const mongoose = require('mongoose')
 
+
+// const blogSchema = new Schema({
+//   title:  String, // String is shorthand for {type: String}
+//   author: String,
+//   body:   String,
+//   comments: [{ body: String, date: Date }],
+//   date: { type: Date, default: Date.now },
+//   hidden: Boolean,
+//   meta: {
+//     votes: Number,
+//     favs:  Number
+//   }
+// });
+
+
+
+
 const AddCompanySchema = new mongoose.Schema({
   userId: {
     type: String,
@@ -15,8 +32,8 @@ const AddCompanySchema = new mongoose.Schema({
     required: true
   },
   joblink: {
-    url: String 
-   },
+    type: String
+  },
   role: {
     type: String,
     // required: true
@@ -29,41 +46,42 @@ const AddCompanySchema = new mongoose.Schema({
     type: String,
     // required: true
   },
-  contacts: [{
-    name: { type: String },
-    position: { type: String },
-    email: { type: String },
-    phone: { type: String },
-    notes: { type: String },
-    thankYou: { type: Date },
-    coffeeChat: { type: Boolean },
-    coffeeChatDate: { type: Date },
-    status: { type: String },
-    links: [{
-      label: { type: String },
-      url: { type: String }
-    }]
-  }],
-  Applied: {
-    type: String,
-    // required: true
-  },
-  //not required if user is just scouting the area
-  dateApplicationSent: {
-    type: Date
-  },
-  interviewDate: {
-    type: Date
-  },
-  interviewFollowUp: {
-    type: Boolean
-  },
-  interviewFollowupDate: {
-    type: Date
-  },
-  nextSteps: {
-    type: String
-  }
+  // contacts needs to be its own schema
+  // contacts: [{
+  //   name: { type: String },
+  //   position: { type: String },
+  //   email: { type: String },
+  //   phone: { type: String },
+  //   notes: { type: String },
+  //   thankYou: { type: Date },
+  //   coffeeChat: { type: Boolean },
+  //   coffeeChatDate: { type: Date },
+  //   status: { type: String },
+  //   links: [{
+  //     label: { type: String },
+  //     url: { type: String }
+  //   }]
+  // }],
+  // applied: {
+  //   type: String,
+  //   // required: true
+  // },
+  // //not required if user is just scouting the area
+  // dateApplicationSent: {
+  //   type: Date
+  // },
+  // interviewDate: {
+  //   type: Date
+  // },
+  // interviewFollowUp: {
+  //   type: Boolean
+  // },
+  // interviewFollowupDate: {
+  //   type: Date
+  // },
+  // nextSteps: {
+  //   type: String
+  // }
 })
 
 module.exports = mongoose.model('addCompany', AddCompanySchema)

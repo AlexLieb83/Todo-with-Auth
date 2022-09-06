@@ -43,8 +43,7 @@ app.use(passport.session());
 app.use(flash());
 
 // '/' leads to mainRoutes
-app.use("/", mainRoutes);
-//adjust this: 
+app.use("/", mainRoutes); 
 app.use("/company", companyRoutes);
 
 app.listen(process.env.PORT, () => {
