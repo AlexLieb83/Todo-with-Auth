@@ -1,34 +1,34 @@
-// const companies = [
-//   {
-//     companyName: "NPR",
-//     dateAdded: "9 / 3 / 22",
-//     URL: "https://www.npr.org/careers",
-//     role: "Front End Dev",
-//     typeOfPosition: "Software Dev",
-//     jobSource: "https://www.npr.org/careers",
-//     applied: "false",
-//     dateAppSent: "NA",
-//     interviewDate: "NA",
-//     interviewFollowUp: "NA",
-//     interviewFollowUpDate: "NA",
-//     nextSteps: "Reach out to Contacts",
-//   },
-//   {
-//     companyName: "NPR",
-//     dateAdded: "9 / 3 / 22",
-//     URL: "https://www.npr.org/careers",
-//     role: "Front End Dev",
-//     typeOfPosition: "Software Dev",
-//     jobSource: "https://www.npr.org/careers",
-//     applied: "false",
-//     dateAppSent: "NA",
-//     interviewDate: "NA",
-//     interviewFollowUp: "NA",
-//     interviewFollowUpDate: "NA",
-//     nextSteps: "Reach out to Contacts",
-//   },
-// ];
-// console.log(companies);
+const companies = [
+  {
+    companyName: "NPR",
+    dateAdded: "9 / 3 / 22",
+    URL: "https://www.npr.org/careers",
+    role: "Front End Dev",
+    typeOfPosition: "Software Dev",
+    jobSource: "https://www.npr.org/careers",
+    applied: "false",
+    dateAppSent: "NA",
+    interviewDate: "NA",
+    interviewFollowUp: "NA",
+    interviewFollowUpDate: "NA",
+    nextSteps: "Reach out to Contacts",
+  },
+  {
+    companyName: "NPR",
+    dateAdded: "9 / 3 / 22",
+    URL: "https://www.npr.org/careers",
+    role: "Front End Dev",
+    typeOfPosition: "Software Dev",
+    jobSource: "https://www.npr.org/careers",
+    applied: "false",
+    dateAppSent: "NA",
+    interviewDate: "NA",
+    interviewFollowUp: "NA",
+    interviewFollowUpDate: "NA",
+    nextSteps: "Reach out to Contacts",
+  },
+];
+console.log(companies);
 
 //loops through the companies array
 // function loadTableData(table, data) {
@@ -41,26 +41,12 @@
 //     }
 //   }
 // }
-
-// //populates hitlist with data from companies array
-// let table = document.querySelector("#hitlistTableBody");
-// let data = companies;
-// loadTableData(table, companies);
-
-// //Adding Buttons to each row
-// let tr = document.querySelectorAll("tbody > tr");
-
-// Array.from(tr).forEach(function (trArray) {
-//   //add View Contacts Button
-//   let buttonViewContacts = document.createElement("button");
-//   let tdViewContacts = document.createElement("td");
-//   buttonViewContacts.innerText = "View Contacts";
-//   buttonViewContacts.classList.add('btn', 'btn-dark')
-//   tdViewContacts.append(buttonViewContacts);
-//   trArray.append(tdViewContacts);
-//   buttonViewContacts.addEventListener("click", viewContacts);
-//   //add route to link the button to the /companyView Page
-//   // add href = '/companyView'
+//converting viewContract
+// location.href = "/company";
+function viewContacts() {
+  location.href = "/company/goToAdd";
+  //change this path to the correct path once built
+}
 
 //   //add Edit Company Button
 //   let buttonEditCompany = document.createElement("button");
