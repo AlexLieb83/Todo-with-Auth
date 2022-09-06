@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head> -->
+<%- include('partials/navbar.ejs') %>
+<body>
+  
+  <%- include ('partials/navbar.ejs') %>
+  <h1>Company View</h1>
+  
+  <h2>Company Header Information</h2>
+  
+  <h2>Contact Table</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Position</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Notes</th>
+        <th scope="col">Thank You</th>
+        <th scope="col">Coffee Chat</th>
+        <th scope="col">Coffee Chat Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Links</th>
+      </tr>
+    </thead>
+    <tbody id="contactsTable">
+      <% contacts.forEach((x,i) => { %>
+      <tr>
+        <th scope="row"><%=i+1%></th>
+        <td><%= x.name %></td>
+        <td><%= x.position %></td>
+        <td><%= x.email %></td>
+        <td><%= x.phone %></td>
+        <td><%= x.notes %></td>
+        <td><%= x.thankYou %></td>
+        <td><%= x.coffeeChat %></td>
+        <td><%= x.coffeeChatDate %></td>
+        <td><%= x.status %></td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+         
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <% x.links.forEach(link => { %>
+                  <li><a class="dropdown-item" target="_blank" href=<%=link.url%>><%=link.label%></a></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <ul>
+    <% companies.forEach( el=> { %>
+      <li class='companyName' data-id='<%=el.companies%>'>
+        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.companyName %></span>
+        <span class='del'> Delete </span>
+      </li>
+      <% }) %>
+  </ul>
+  <a href="/addCompany/hitlist">See Hitlist/Add Company</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+  <a href="/logout">Logout</a>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Add a company to your Hitlist</h1>
+
+    <form action="/company/addCompany" method="POST">
+      <h2>Company Details</h2>
+
+      <label for="company">Company</label>
+      <input
+        type="text"
+        placeholder="Company Name"
+        id="companyName"
+        name="companyName"
+        value="company name"
+      />
+      <br />
+      <label for="dateCreated">Date Added</label>
+      <!-- adjust date to just time stamp as needed-->
+      <input type="date" id="datePicker dateCreated" name="dateAdded" />
+      <br />
+      <!--  -->
+      <label for="url">Job Link</label>
+      <input type="text" placeholder="Job Link" id="url" name="joblink" />
+      <br />
+      <label for="role">Role</label>
+      <input type="text" placeholder="Role" id="role" name="role" />
+      <br />
+
+      <label for="positionType">Position Type</label>
+      <input
+        type="text"
+        placeholder="Position Type"
+        id="positionType"
+        name="positionType"
+      />
+      <br />
+
+      <label for="source">Source</label>
+      <input type="text" placeholder="Source" id="source" name="source" />
+      <br />
+
+      <!-- <label for="applied">Applied?</label>
+      <input type="checkbox" name="applied" />
+      <br /> -->
+
+      <label for="dateApplicationSent">Date Application Sent</label>
+      <input
+        type="text"
+        placeholder="Date Application Sent"
+        id="dateApplicationSent"
+        name="dateApplicationSent"
+      />
+      <br />
+
+      <label for="interviewDate">Interview Date</label>
+
+      <input type="text" id="interviewDate" name="interviewDate" />
+
+      <br />
+
+      <label for="interviewFollowUpDate">Interview Follow Up Date</label>
+
+      <input
+        type="text"
+        id="interviewFollowUpDate"
+        name="interviewFollowUpDate"
+      />
+
+      <br />
+
+      <label for="nextSteps">Next Steps</label>
+      <input
+        type="text"
+        placeholder="Next Steps"
+        id="nextSteps"
+        name="nextSteps"
+      />
+      <br />
+
+      <!-- <h3>Links</h3> -->
+
+      <!-- 
+        <h3>Contact</h3>
+        <label for="firstname">Name</label>
+        <input type="text" placeholder="John Smith" id="name" name="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" placeholder="john@smith.com" id="email" name="email">
+        <br>
+        <label for="phone">Phone</label>
+        <input type="tel" placeholder="(555) 555-1234" id="phone" name="phone">
+        <br>
+        <label for="notes">Notes</label>
+        <input type="textarea" placeholder="Notes" id="notes" name="notes">
+        <br>
+        <h3>Next Steps</h3>
+        <label for="coffeechat">Coffee Chat</label>
+        <input type="checkbox" id="coffeechat" name="coffeeChat">
+        <br>
+        <label for="coffeeChatDate">Coffee Chat Date</label>
+
+        <input type="date" id="datePicker coffeeChatDate" name='coffeeDateAdded'>
+
+        <br>
+        <label for="status">Status</label>
+        <select name = "dropdown">
+            <option value="Active" name="Active" selected>Active</option>
+            <option value="Inactive" name="Inactive">Inactive</option>
+         </select>
+        
+        <br>
+        -->
+      <input type="submit" />
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="../public/js/main.js"></script>
+  </body>
+</html>

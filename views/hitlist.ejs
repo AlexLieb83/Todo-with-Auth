@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <!-- ADD IN NAME WHEN BACKEND IS CONNECTED**** -->
+    <h1>Welcome <%= user.userName %>! Check out your Hitlist below.</h1>
+    <br /><br />
+    <button type="button" class="addNewCompany btn btn-success">
+      <a style="color: white; text-decoration: none" href="/company/goToAdd"
+        >Add New Company</a
+      >
+    </button>
+    <table id="hitlistTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Date Added</th>
+          <th>URL</th>
+          <th>Role</th>
+          <th>Type of Position</th>
+          <th>Job Source</th>
+          <th>Date Application Sent</th>
+          <th>Interview Date</th>
+          <th>Interview Follow Up</th>
+          <th>Interview Follow Up Date</th>
+          <th>Next Steps</th>
+          <th>Company Contacts</th>
+          <th>Edit Company</th>
+          <th>Delete Company</th>
+        </tr>
+      </thead>
+      <tbody id="hitlistTableBody">
+        <% companies.forEach( el => { %>
+        <tr class="companyItem" data-id="<%=el._id%>">
+          <td><%= el.companyName %></td>
+          <td><%= el.dateAdded %></td>
+          <td><%= el.joblink %></td>
+          <td><%= el.role %></td>
+          <td><%= el.positionType %></td>
+          <td><%= el.source %></td>
+          <td><%= el.dateApplicationSent %></td>
+          <td><%= el.interviewDate %></td>
+          <td><%= el.interviewFollowUpDate %></td>
+          <td><%= el.nextSteps %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <a class="btn btn-danger" href="/logout">Logout</a>
+
+    <script src="js/hitlist.js"></script>
+  </body>
+</html>
