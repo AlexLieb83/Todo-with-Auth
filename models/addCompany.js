@@ -11,6 +11,7 @@ const AddCompanySchema = new mongoose.Schema({
   },
   dateAdded: {
     type: Date,
+    default: Date.now,
     required: true
   },
   joblink: {
@@ -18,15 +19,15 @@ const AddCompanySchema = new mongoose.Schema({
    },
   role: {
     type: String,
-    required: true
+    // required: true
   },
   positionType: {
     type: String,
-    required: true
+    // required: true
   },
   source: {
     type: String,
-    required: true
+    // required: true
   },
   contacts: [{
     name: { type: String },
@@ -45,7 +46,7 @@ const AddCompanySchema = new mongoose.Schema({
   }],
   Applied: {
     type: String,
-    required: true
+    // required: true
   },
   //not required if user is just scouting the area
   dateApplicationSent: {
@@ -63,8 +64,6 @@ const AddCompanySchema = new mongoose.Schema({
   nextSteps: {
     type: String
   }
-
-
 })
 
 module.exports = mongoose.model('addCompany', AddCompanySchema)

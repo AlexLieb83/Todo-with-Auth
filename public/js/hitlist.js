@@ -29,6 +29,7 @@ const companies = [
   },
 ];
 
+
 console.log(companies);
 
 //loops through the companies array
@@ -56,6 +57,7 @@ Array.from(tr).forEach(function (trArray) {
   let buttonViewContacts = document.createElement("button");
   let tdViewContacts = document.createElement("td");
   buttonViewContacts.innerText = "View Contacts";
+  buttonViewContacts.classList.add('btn', 'btn-dark')
   tdViewContacts.append(buttonViewContacts);
   trArray.append(tdViewContacts);
   buttonViewContacts.addEventListener("click", viewContacts);
@@ -64,6 +66,7 @@ Array.from(tr).forEach(function (trArray) {
   let buttonEditCompany = document.createElement("button");
   let tdEditCompany = document.createElement("td");
   buttonEditCompany.innerText = "Edit Company";
+  buttonEditCompany.classList.add('btn', 'btn-primary')
   tdEditCompany.append(buttonEditCompany);
   trArray.append(tdEditCompany);
   buttonEditCompany.addEventListener("click", editCompany);
@@ -72,6 +75,7 @@ Array.from(tr).forEach(function (trArray) {
   let buttonDeleteCompany = document.createElement("button");
   let tdDeleteCompany = document.createElement("td");
   buttonDeleteCompany.innerText = "Delete Company";
+  buttonDeleteCompany.classList.add('btn', 'btn-danger')
   tdDeleteCompany.append(buttonDeleteCompany);
   trArray.append(tdDeleteCompany);
   buttonDeleteCompany.addEventListener("click", deleteCompany);

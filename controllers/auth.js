@@ -5,7 +5,7 @@ const User = require("../models/User");
 //function for login, redirects user to their addCompany
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect("/addCompany"); //*** Should this be different? */
+    return res.redirect("/company"); //*** Should this be different? */
   }
   //???***
   res.render("login", {
@@ -46,7 +46,7 @@ exports.postLogin = (req, res, next) => {
       }
       //if no errors, return success and send user to their last saved session or /addCompany
       req.flash("success", { msg: "Success! You are logged in." });
-      res.redirect(req.session.returnTo || "/addCompany");
+      res.redirect(req.session.returnTo || "/company");
     });
   })(req, res, next);
 };
@@ -67,7 +67,7 @@ exports.logout = (req, res) => {
 //successful sign up
 exports.getSignup = (req, res) => {
   if (req.user) {
-    return res.redirect("/addCompany");
+    return res.redirect("/company");
   }
   //????
   res.render("signup", {
@@ -127,7 +127,7 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/addCompany");
+          res.redirect("/company");
         });
       });
     }
