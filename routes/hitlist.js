@@ -10,13 +10,13 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //etc etc
 router.get("/", ensureAuth, hitlistController.getHitlist);
 
-router.get("/addCompany", addCompanyController.addCompany);
+router.get("/addCompany", addCompanyController.createCompany);
 
 
 //buttons at end of each company
-router.get("/addContacts", contactsController.addConctact);
+router.get("/addContacts", contactsController.createContact);
 
-router.get("/getContacts", contactsController.getConctacts);
+router.get("/getContacts", contactsController.getContacts);
 
 router.get("/editCompany", editCompanyController.getEditCompany)
 
