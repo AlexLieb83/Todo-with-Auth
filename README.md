@@ -6,7 +6,7 @@ Early stages of development, understanding the codebase.
 
 A web app to create, edit, and delete companies (and their contacts) from a personalized database. These are companies that you are actively looking at future employement with and are networking with their employees.
 
-Live Project at: <a href="#" target="_blank" rel="noreferrer"> placeholder </a>
+Live Project at: <a href="https://bc-hitlist.herokuapp.com/" target="_blank" rel="noreferrer">https://bc-hitlist.herokuapp.com/</a>
 
 <a href="#" target="_blank" rel="noreferrer"> <img src="#" alt="project example"/> </a>
 
