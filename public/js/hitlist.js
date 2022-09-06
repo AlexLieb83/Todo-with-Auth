@@ -1,34 +1,34 @@
-const companies = [
-  {
-    companyName: "NPR",
-    dateAdded: "9 / 3 / 22",
-    URL: "https://www.npr.org/careers",
-    role: "Front End Dev",
-    typeOfPosition: "Software Dev",
-    jobSource: "https://www.npr.org/careers",
-    applied: "false",
-    dateAppSent: "NA",
-    interviewDate: "NA",
-    interviewFollowUp: "NA",
-    interviewFollowUpDate: "NA",
-    nextSteps: "Reach out to Contacts",
-  },
-  {
-    companyName: "NPR",
-    dateAdded: "9 / 3 / 22",
-    URL: "https://www.npr.org/careers",
-    role: "Front End Dev",
-    typeOfPosition: "Software Dev",
-    jobSource: "https://www.npr.org/careers",
-    applied: "false",
-    dateAppSent: "NA",
-    interviewDate: "NA",
-    interviewFollowUp: "NA",
-    interviewFollowUpDate: "NA",
-    nextSteps: "Reach out to Contacts",
-  },
-];
-console.log(companies);
+// const companies = [
+//   {
+//     companyName: "NPR",
+//     dateAdded: "9 / 3 / 22",
+//     URL: "https://www.npr.org/careers",
+//     role: "Front End Dev",
+//     typeOfPosition: "Software Dev",
+//     jobSource: "https://www.npr.org/careers",
+//     applied: "false",
+//     dateAppSent: "NA",
+//     interviewDate: "NA",
+//     interviewFollowUp: "NA",
+//     interviewFollowUpDate: "NA",
+//     nextSteps: "Reach out to Contacts",
+//   },
+//   {
+//     companyName: "NPR",
+//     dateAdded: "9 / 3 / 22",
+//     URL: "https://www.npr.org/careers",
+//     role: "Front End Dev",
+//     typeOfPosition: "Software Dev",
+//     jobSource: "https://www.npr.org/careers",
+//     applied: "false",
+//     dateAppSent: "NA",
+//     interviewDate: "NA",
+//     interviewFollowUp: "NA",
+//     interviewFollowUpDate: "NA",
+//     nextSteps: "Reach out to Contacts",
+//   },
+// ];
+// console.log(companies);
 
 //loops through the companies array
 // function loadTableData(table, data) {
