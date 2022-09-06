@@ -1,34 +1,34 @@
-// const companies = [
-//   {
-//     companyName: "NPR",
-//     dateAdded: "9 / 3 / 22",
-//     URL: "https://www.npr.org/careers",
-//     role: "Front End Dev",
-//     typeOfPosition: "Software Dev",
-//     jobSource: "https://www.npr.org/careers",
-//     applied: "false",
-//     dateAppSent: "NA",
-//     interviewDate: "NA",
-//     interviewFollowUp: "NA",
-//     interviewFollowUpDate: "NA",
-//     nextSteps: "Reach out to Contacts",
-//   },
-//   {
-//     companyName: "NPR",
-//     dateAdded: "9 / 3 / 22",
-//     URL: "https://www.npr.org/careers",
-//     role: "Front End Dev",
-//     typeOfPosition: "Software Dev",
-//     jobSource: "https://www.npr.org/careers",
-//     applied: "false",
-//     dateAppSent: "NA",
-//     interviewDate: "NA",
-//     interviewFollowUp: "NA",
-//     interviewFollowUpDate: "NA",
-//     nextSteps: "Reach out to Contacts",
-//   },
-// ];
-// console.log(companies);
+const companies = [
+  {
+    companyName: "NPR",
+    dateAdded: "9 / 3 / 22",
+    URL: "https://www.npr.org/careers",
+    role: "Front End Dev",
+    typeOfPosition: "Software Dev",
+    jobSource: "https://www.npr.org/careers",
+    applied: "false",
+    dateAppSent: "NA",
+    interviewDate: "NA",
+    interviewFollowUp: "NA",
+    interviewFollowUpDate: "NA",
+    nextSteps: "Reach out to Contacts",
+  },
+  {
+    companyName: "NPR",
+    dateAdded: "9 / 3 / 22",
+    URL: "https://www.npr.org/careers",
+    role: "Front End Dev",
+    typeOfPosition: "Software Dev",
+    jobSource: "https://www.npr.org/careers",
+    applied: "false",
+    dateAppSent: "NA",
+    interviewDate: "NA",
+    interviewFollowUp: "NA",
+    interviewFollowUpDate: "NA",
+    nextSteps: "Reach out to Contacts",
+  },
+];
+console.log(companies);
 
 //loops through the companies array
 function loadTableData(table, data) {
@@ -86,30 +86,9 @@ Array.from(tr).forEach(function (trArray) {
 // }
 //converting viewContract 
 // location.href = "/company";
-async function viewContacts() {
-  // const todoId = this.parentNode.dataset.id
-
-  try {
-
-  } catch (err) {
-    console.log(err)
-  }
-
-//do I need this for a get request that redirects us to: where?
-  // try{
-  //     const response = await fetch('todos/markComplete', {
-  //         method: 'put',
-  //         headers: {'Content-type': 'application/json'},
-  //         body: JSON.stringify({
-  //             'todoIdFromJSFile': todoId
-  //         })
-  //     })
-  //     const data = await response.json()
-  //     console.log(data)
-  //     location.reload()
-  // }catch(err){
-  //     console.log(err)
-  // }
+function viewContacts() {
+  location.href = "/company/goToAdd";
+  //change this path to the correct path once built
 }
 
 function editCompany() {
