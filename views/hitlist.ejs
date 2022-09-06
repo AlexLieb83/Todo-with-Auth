@@ -31,6 +31,7 @@
         </tr>
       </thead>
       <tbody id="hitlistTableBody">
+        <% console.log(companies)%>
         <% companies.forEach( el => { %>
         <tr class="companyItem" data-id="<%=el._id%>">
           <td><%= el.companyName %></td>
@@ -43,6 +44,7 @@
           <td><%= el.interviewDate %></td>
           <td><%= el.interviewFollowUpDate %></td>
           <td><%= el.nextSteps %></td>
+          <% console.log(el)%>
         </tr>
         <% }) %>
       </tbody>

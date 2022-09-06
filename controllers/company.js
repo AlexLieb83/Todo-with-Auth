@@ -35,7 +35,12 @@ module.exports = {
                 role: req.body.role,
                 positionType: req.body.positionType,
                 source: req.body.source,
-
+                dateApplicationSent: req.body.dateApplicationSent,
+                interviewDate: req.body.interviewDate,
+                interviewFollowUpDate: req.body.interviewFollowUpDate,
+                nextSteps: req.body.nextSteps,
+                contacts: req.body.contacts || [],
+                
                 // firstName: req.body.firstName,
                 // lastName: req.body.lastName,
                 // email: req.body.email,
