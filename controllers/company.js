@@ -1,4 +1,4 @@
-const addCompany = require("../models/addCompany"); 
+const addCompany = require("../models/addCompany");
 
 module.exports = {
     //reading the companies
@@ -30,24 +30,26 @@ module.exports = {
             await addCompany.create({
                 userId: req.user.id,
                 companyName: req.body.companyName,
-                dateAdded: req.body.DateAdded,
-                role: req.body.Role,
-                positionType: req.body.PositionType,
-                source: req.body.Source,
-                joblink: req.body.URLLink,
-                firstName: req.body.FirstName,
-                lastName: req.body.LastName,
-                email: req.body.Email,
-                phone: req.body.Phone,
-                notes: req.body.Notes,
+                dateAdded: req.body.dateAdded,
+                joblink: req.body.joblink,
+                role: req.body.role,
+                positionType: req.body.positionType,
+                source: req.body.source,
+
+                // firstName: req.body.firstName,
+                // lastName: req.body.lastName,
+                // email: req.body.email,
+                // phone: req.body.phone,
+                // notes: req.body.notes,
                 // coffeeChatDate: req.body.CoffeeChat, //I believe this second coffee chat is a duplicate from line 26 on todos.ejs?
                 // cofeeChatDate: req.body.CoffeeChat, // another duplicate?
                 // cofeechatDate: req.body.DateAdded, // another duplicate?
-                status: req.body.Active, //extracting data from drop down, anythign special needed?
-                Applied: req.body.Applied,
-                completed: false, // leaving in to grab a count of total companies. 
-                
+                // status: req.body.active, //extracting data from drop down, anythign special needed?
+                // applied: req.body.applied,
+                // completed: false, // leaving in to grab a count of total companies. 
+
             });
+            console.log(req.body.role)
             console.log("A new company has been created!");
             res.redirect("/company"); //***CHANGE*** -> whats the home directory called?
         } catch (err) {
